@@ -9,6 +9,8 @@ function cleanInputString (str) {       /**Even though you set an input element 
 const strArray = str.split('');  /**The split() method splits a string into an array of substrings, and returns the new array. You can pass in an optional separator which tells the method where each split should happen. */
 const cleanStrArray = []; 
 for (let i = 0; i < strArray.length; i++) {     /**Use a for loop to iterate through each character in your strArray array. */
-
+if (!["+", "-", " "].includes(strArray[i])) {   /**Within your loop, you need to check if the character in strArray at index i is not a +, -, or a space. If it is not, push it to the cleanStrArray. */
+    cleanStrArray.push(strArray[i])   
+  }
 }
 }
