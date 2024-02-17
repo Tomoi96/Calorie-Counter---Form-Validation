@@ -92,7 +92,7 @@ function clearForm() {
     budgetNumberInput.value = '';  /**After loop completes, budgetNumberInput needs to be cleared. Thats why we set the value property of budgetNumberInput to an empty string. */
     output.innerText = '';  /**To clear the output element's text. Doing this by setting the innerText property to an empty string. The difference between innerText and innerHTML is that innerText will not render HTML elements, but will display the tags and content as raw text. */
     output.classList.add('hide');  /**To finish off this function, we need to restore the hide class to the output element. The classList property has an .add() method which is the opposite of the .remove() method. It accepts a string representing the class to add to the element. Adding the hide class to your output. */
-    clearButton.addEventListener("click", clearForm);  /**an event listener to the clearButton button. When the button is clicked, it should call the clearForm function. */
 }
 addEntryButton.addEventListener("click", addEntry); /**The addEventListener method takes two arguments. The first is the event to listen to. (Ex. 'click') The second is the callback function, or the function that runs when the event is triggered. */
 calorieCounter.addEventListener("submit", calculateCalories);
+clearButton.addEventListener("click", clearForm);  /**an event listener to the clearButton button. When the button is clicked, it should call the clearForm function. */
